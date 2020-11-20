@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct SideBar: View {
+    @State private var selectedNavigationItem: NavigationItem = .recordTime 
+    
     var body: some View {
         List {
-            Text("")
+            ForEach(NavigationItem.allCases) { item in
+                NavigationLink(item.userFacingString, destination: item.view)
+                    .tag(item)
+            }
         }.listStyle(SidebarListStyle())
     }
 }

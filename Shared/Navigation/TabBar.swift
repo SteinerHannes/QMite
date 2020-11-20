@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct TabBar: View {
+    @State private var selectedNavigationItem: NavigationItem = .recordTime
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            ForEach(NavigationItem.allCases) { item in
+                item.view
+                    .tabItem { Label(item.userFacingString, image: item.icon) }
+                    .tag(item)
+            }
+        }
     }
 }
 

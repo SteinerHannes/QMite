@@ -17,6 +17,7 @@
 		EF97AE512567BA440083F8F7 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE502567BA440083F8F7 /* SideBar.swift */; };
 		EF97AE552567BAA20083F8F7 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE542567BAA20083F8F7 /* NavigationItem.swift */; };
 		EF97AE562567BAA20083F8F7 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE542567BAA20083F8F7 /* NavigationItem.swift */; };
+		EFCCBE6E25681E54009790DF /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE502567BA440083F8F7 /* SideBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -205,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCCBE6E25681E54009790DF /* SideBar.swift in Sources */,
 				EF97AE4B2567BA340083F8F7 /* TabBar.swift in Sources */,
 				EF97AE3B2567B5A70083F8F7 /* ContentView.swift in Sources */,
 				EF97AE552567BAA20083F8F7 /* NavigationItem.swift in Sources */,
