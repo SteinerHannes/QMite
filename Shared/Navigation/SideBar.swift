@@ -19,6 +19,7 @@ struct SideBar: View {
                     ToolbarItem(placement: ToolbarItemPlacement.navigation) {
                         Button(action: { }, label: {
                             Image(systemName: "person.fill")
+                                .font(.system(size: 22, weight: .light))
                         })
                     }
                 }
@@ -29,6 +30,7 @@ struct SideBar: View {
                     ToolbarItem(placement: ToolbarItemPlacement.automatic) {
                         Button(action: { }, label: {
                             Image(systemName: "person.fill")
+                                .imageScale(.large)
                         })
                     }
                 }
