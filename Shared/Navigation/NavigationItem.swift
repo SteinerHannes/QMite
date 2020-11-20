@@ -14,7 +14,12 @@ enum NavigationItem: Identifiable {
     }
     
     var view: some View {
-        return Text("asdasdasdas")
+        switch self {
+            case .recordTime:
+                return AnyView(RecordTimeView())
+            case .statistics:
+                return AnyView(Text(""))
+        }
     }
     
     var userFacingString: String {

@@ -14,7 +14,10 @@ struct TabBar: View {
         TabView {
             ForEach(NavigationItem.allCases) { item in
                 item.view
-                    .tabItem { Label(item.userFacingString, image: item.icon) }
+                    .tabItem {
+                        Text(item.userFacingString)
+                        Image(systemName: item.icon)
+                    }
                     .tag(item)
             }
         }

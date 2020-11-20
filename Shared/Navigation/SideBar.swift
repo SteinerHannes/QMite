@@ -15,10 +15,23 @@ struct SideBar: View {
             #if os(iOS)
             sidebar
                 .navigationTitle("Navigation")
+                .toolbar {
+                    ToolbarItem(placement: ToolbarItemPlacement.navigation) {
+                        Button(action: { }, label: {
+                            Image(systemName: "person.fill")
+                        })
+                    }
+                }
             #else
             sidebar
                 .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, maxHeight: .infinity)
-                .navigationTitle("Navigation")
+                .toolbar {
+                    ToolbarItem(placement: ToolbarItemPlacement.automatic) {
+                        Button(action: { }, label: {
+                            Image(systemName: "person.fill")
+                        })
+                    }
+                }
             #endif
             Text("Select a Section")
         }
@@ -27,8 +40,15 @@ struct SideBar: View {
     var sidebar: some View {
         List {
             ForEach(NavigationItem.allCases) { item in
-                NavigationLink(item.userFacingString, destination: item.view)
-                    .tag(item)
+                NavigationLink(
+                    destination: item.view,
+                    label: {
+                        Label(
+                            title: { Text(item.userFacingString) },
+                            icon: { Image(systemName: item.icon) }
+                        )
+                    }
+                )
             }
         }.listStyle(SidebarListStyle())
     }

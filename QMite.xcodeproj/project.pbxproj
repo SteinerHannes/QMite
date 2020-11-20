@@ -18,6 +18,8 @@
 		EF97AE552567BAA20083F8F7 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE542567BAA20083F8F7 /* NavigationItem.swift */; };
 		EF97AE562567BAA20083F8F7 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE542567BAA20083F8F7 /* NavigationItem.swift */; };
 		EFCCBE6E25681E54009790DF /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE502567BA440083F8F7 /* SideBar.swift */; };
+		EFCCBE742568221B009790DF /* RecordTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCBE732568221B009790DF /* RecordTimeView.swift */; };
+		EFCCBE752568221B009790DF /* RecordTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCBE732568221B009790DF /* RecordTimeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,7 @@
 		EF97AE4A2567BA340083F8F7 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		EF97AE502567BA440083F8F7 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		EF97AE542567BAA20083F8F7 /* NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
+		EFCCBE732568221B009790DF /* RecordTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 				EF97AE262567B5A70083F8F7 /* QMiteApp.swift */,
 				EF97AE272567B5A70083F8F7 /* ContentView.swift */,
 				EF97AE492567BA000083F8F7 /* Navigation */,
+				EFCCBE72256821DC009790DF /* RecordTime */,
 				EF97AE282567B5A70083F8F7 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -107,6 +111,14 @@
 				EF97AE542567BAA20083F8F7 /* NavigationItem.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		EFCCBE72256821DC009790DF /* RecordTime */ = {
+			isa = PBXGroup;
+			children = (
+				EFCCBE732568221B009790DF /* RecordTimeView.swift */,
+			);
+			path = RecordTime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCCBE742568221B009790DF /* RecordTimeView.swift in Sources */,
 				EFCCBE6E25681E54009790DF /* SideBar.swift in Sources */,
 				EF97AE4B2567BA340083F8F7 /* TabBar.swift in Sources */,
 				EF97AE3B2567B5A70083F8F7 /* ContentView.swift in Sources */,
@@ -221,6 +234,7 @@
 				EF97AE3C2567B5A70083F8F7 /* ContentView.swift in Sources */,
 				EF97AE512567BA440083F8F7 /* SideBar.swift in Sources */,
 				EF97AE562567BAA20083F8F7 /* NavigationItem.swift in Sources */,
+				EFCCBE752568221B009790DF /* RecordTimeView.swift in Sources */,
 				EF97AE3A2567B5A70083F8F7 /* QMiteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
