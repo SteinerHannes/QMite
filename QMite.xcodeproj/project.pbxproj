@@ -13,6 +13,10 @@
 		EF97AE3C2567B5A70083F8F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE272567B5A70083F8F7 /* ContentView.swift */; };
 		EF97AE3D2567B5A70083F8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF97AE282567B5A70083F8F7 /* Assets.xcassets */; };
 		EF97AE3E2567B5A70083F8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF97AE282567B5A70083F8F7 /* Assets.xcassets */; };
+		EF97AE4B2567BA340083F8F7 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE4A2567BA340083F8F7 /* TabBar.swift */; };
+		EF97AE512567BA440083F8F7 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE502567BA440083F8F7 /* SideBar.swift */; };
+		EF97AE552567BAA20083F8F7 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE542567BAA20083F8F7 /* NavigationItem.swift */; };
+		EF97AE562567BAA20083F8F7 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE542567BAA20083F8F7 /* NavigationItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		EF97AE352567B5A70083F8F7 /* QMite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QMite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF97AE372567B5A70083F8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF97AE382567B5A70083F8F7 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		EF97AE4A2567BA340083F8F7 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		EF97AE502567BA440083F8F7 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		EF97AE542567BAA20083F8F7 /* NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +66,7 @@
 			children = (
 				EF97AE262567B5A70083F8F7 /* QMiteApp.swift */,
 				EF97AE272567B5A70083F8F7 /* ContentView.swift */,
+				EF97AE492567BA000083F8F7 /* Navigation */,
 				EF97AE282567B5A70083F8F7 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -88,6 +96,16 @@
 				EF97AE382567B5A70083F8F7 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		EF97AE492567BA000083F8F7 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				EF97AE4A2567BA340083F8F7 /* TabBar.swift */,
+				EF97AE502567BA440083F8F7 /* SideBar.swift */,
+				EF97AE542567BAA20083F8F7 /* NavigationItem.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF97AE4B2567BA340083F8F7 /* TabBar.swift in Sources */,
 				EF97AE3B2567B5A70083F8F7 /* ContentView.swift in Sources */,
+				EF97AE552567BAA20083F8F7 /* NavigationItem.swift in Sources */,
 				EF97AE392567B5A70083F8F7 /* QMiteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF97AE3C2567B5A70083F8F7 /* ContentView.swift in Sources */,
+				EF97AE512567BA440083F8F7 /* SideBar.swift in Sources */,
+				EF97AE562567BAA20083F8F7 /* NavigationItem.swift in Sources */,
 				EF97AE3A2567B5A70083F8F7 /* QMiteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
