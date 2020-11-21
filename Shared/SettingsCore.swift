@@ -9,6 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 struct SettingsState: Equatable {
+    var isSettingsSheetPresented: Bool = true
     var subdomain: String = ""
     var apiKey: String = ""
 
@@ -76,6 +77,7 @@ let settingsReducer = Reducer<SettingsState, SettingsAction, SettingsEnvironment
             state.apiKey = key
             return .none
         case .dismiss:
+            state.isSettingsSheetPresented = false
             return .none
     }
 }

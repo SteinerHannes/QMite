@@ -24,6 +24,12 @@ struct SettingsView: View {
         #if os(iOS)
             return NavigationView {
                 settingsList
+                    .navigationBarItems(trailing:
+                        Button(
+                            action: { ViewStore(store).send(.dismiss) },
+                            label: { Text("Done") }
+                        )
+                    )
                     .listStyle(InsetGroupedListStyle())
                     .navigationBarTitle(Text("Settings"))
             }
