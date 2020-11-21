@@ -17,7 +17,7 @@ struct RecordTimeView: View {
     #if os(iOS)
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     #endif
-    
+
     var body: some View {
         #if os(iOS)
         if horizontalSizeClass == .compact {
@@ -33,9 +33,8 @@ struct RecordTimeView: View {
         recordTime
             .ereaseToAnyView()
         #endif
-        
     }
-    
+
     var recordTime: some View {
         Text("hallo")
     }

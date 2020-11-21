@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabBar: View {
     @State private var selectedNavigationItem: NavigationItem = .recordTime
-    
+
     var body: some View {
         TabView {
             ForEach(NavigationItem.allCases) { item in

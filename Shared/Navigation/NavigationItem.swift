@@ -3,7 +3,7 @@ import SwiftUI
 enum NavigationItem: Identifiable {
     case recordTime
     case statistics
-    
+
     var id: String {
         switch self {
             case .recordTime:
@@ -12,7 +12,7 @@ enum NavigationItem: Identifiable {
                 return "statistics"
         }
     }
-    
+
     var view: some View {
         switch self {
             case .recordTime:
@@ -21,7 +21,7 @@ enum NavigationItem: Identifiable {
                 return AnyView(Text(""))
         }
     }
-    
+
     var userFacingString: String {
         switch self {
             case .recordTime:
@@ -30,7 +30,7 @@ enum NavigationItem: Identifiable {
                 return "Statistics"
         }
     }
-    
+
     var icon: String {
         switch self {
             case .recordTime:
@@ -39,11 +39,10 @@ enum NavigationItem: Identifiable {
                 return "chart.bar.xaxis"
         }
     }
-    
 }
 
 extension NavigationItem: CaseIterable {
-    var allCases : [NavigationItem] {
+    var allCases: [NavigationItem] {
         return [.recordTime, .statistics]
     }
 }

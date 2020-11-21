@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SideBar: View {
-    @State private var selectedNavigationItem: NavigationItem = .recordTime 
-    
+    @State private var selectedNavigationItem: NavigationItem = .recordTime
+
     var body: some View {
         NavigationView {
             #if os(iOS)
@@ -38,7 +38,7 @@ struct SideBar: View {
             Text("Select a Section")
         }
     }
-    
+
     var sidebar: some View {
         List {
             ForEach(NavigationItem.allCases) { item in
