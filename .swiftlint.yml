@@ -14,7 +14,7 @@ force_cast: error # implicitly
 force_try:
   severity: error # explicitly
 
-line_length: 260
+line_length: 130
 
 opt_in_rules: # some rules are only opt-in
   - empty_count

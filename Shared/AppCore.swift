@@ -10,10 +10,13 @@ import ComposableArchitecture
 
 struct AppState: Equatable {
     var isAPIKeyAvailable: Bool = false
+    var selectedNavigationItem: NavigationItem = .recordTime
 }
 
 enum AppAction: Equatable {
     case onAppear
+    case setNavigationItem(NavigationItem)
+    case test
 }
 
 struct AppEnvironment {
@@ -40,7 +43,34 @@ private let _appReducer = Reducer<AppState, AppAction, AppEnvironment> { state, 
             } else {
                 state.isAPIKeyAvailable = true
             }
-
+            return .none
+        case .setNavigationItem(let item):
+            state.selectedNavigationItem = item
+            return .none
+        case .test:
+            state.isAPIKeyAvailable.toggle()
             return .none
     }
+}
+
+let appReducer: Reducer<AppState, AppAction, AppEnvironment> = .combine(
+    _appReducer.debug()
+)
+
+extension Store where State == AppState, Action == AppAction {
+    static let live: Store<AppState, AppAction> = .init(
+        initialState: AppState(),
+        reducer: appReducer,
+        environment: AppEnvironment(
+            mainQueue: DispatchQueue.main.eraseToAnyScheduler()
+        )
+    )
+
+    static let mock: Store<AppState, AppAction> = .init(
+        initialState: AppState(),
+        reducer: appReducer,
+        environment: AppEnvironment(
+            mainQueue: DispatchQueue.main.eraseToAnyScheduler()
+        )
+    )
 }

@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum NavigationItem: Identifiable {
+enum NavigationItem: Identifiable, Hashable {
     case recordTime
     case statistics
 
@@ -16,9 +16,9 @@ enum NavigationItem: Identifiable {
     var view: some View {
         switch self {
             case .recordTime:
-                return AnyView(RecordTimeView())
+                return RecordTimeView().ereaseToAnyView()
             case .statistics:
-                return AnyView(Text(""))
+                return Text("Statistics").ereaseToAnyView()
         }
     }
 

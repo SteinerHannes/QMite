@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-    func ereaseToAnyView() -> some View {
+    func ereaseToAnyView() -> AnyView {
         AnyView(self)
     }
 }

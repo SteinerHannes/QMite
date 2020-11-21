@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct QMiteApp: App {
+    let store: Store<AppState, AppAction> = .live
+
     var body: some Scene {
         #if os(macOS)
         WindowGroup {
-            ContentView()
+            ContentView(store: store)
                 .frame(minWidth: 700, idealWidth: 900, maxWidth: .infinity, minHeight: 400, idealHeight: 600, maxHeight: .infinity)
         }
         Settings {
@@ -21,7 +24,7 @@ struct QMiteApp: App {
         }
         #else
         WindowGroup {
-            ContentView()
+            ContentView(store: store)
         }
         #endif
     }

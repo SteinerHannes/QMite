@@ -6,19 +6,27 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct TabBar: View {
-    @State private var selectedNavigationItem: NavigationItem = .recordTime
+    let store: Store<AppState, AppAction>
 
     var body: some View {
-        TabView {
-            ForEach(NavigationItem.allCases) { item in
-                item.view
+        WithViewStore(store) { viewStore in
+            TabView(
+                selection: viewStore.binding(
+                    get: { $0.selectedNavigationItem },
+                    send: AppAction.setNavigationItem
+                )
+            ) {
+                ForEach(NavigationItem.allCases) { item in
+                    item.view
                     .tabItem {
                         Text(item.userFacingString)
                         Image(systemName: item.icon)
                     }
                     .tag(item)
+                }
             }
         }
     }
@@ -26,6 +34,6 @@ struct TabBar: View {
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBar()
+        TabBar(store: .mock)
     }
 }
