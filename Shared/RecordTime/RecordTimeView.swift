@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-extension View {
-    func ereaseToAnyView() -> some View {
-        AnyView(self)
-    }
-}
-
 struct RecordTimeView: View {
     #if os(iOS)
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass

@@ -13,6 +13,8 @@
 		EF8F9FFF2569149200653D86 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F9FFD2569149200653D86 /* AppCore.swift */; };
 		EF8FA00C2569182F00653D86 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EF8FA00B2569182F00653D86 /* .swiftlint.yml */; };
 		EF8FA00D2569182F00653D86 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EF8FA00B2569182F00653D86 /* .swiftlint.yml */; };
+		EF8FA016256919F600653D86 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FA015256919F600653D86 /* Extension+View.swift */; };
+		EF8FA017256919F600653D86 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FA015256919F600653D86 /* Extension+View.swift */; };
 		EF97AE392567B5A70083F8F7 /* QMiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE262567B5A70083F8F7 /* QMiteApp.swift */; };
 		EF97AE3A2567B5A70083F8F7 /* QMiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE262567B5A70083F8F7 /* QMiteApp.swift */; };
 		EF97AE3B2567B5A70083F8F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE272567B5A70083F8F7 /* ContentView.swift */; };
@@ -31,6 +33,7 @@
 /* Begin PBXFileReference section */
 		EF8F9FFD2569149200653D86 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 		EF8FA00B2569182F00653D86 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		EF8FA015256919F600653D86 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		EF97AE262567B5A70083F8F7 /* QMiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QMiteApp.swift; sourceTree = "<group>"; };
 		EF97AE272567B5A70083F8F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EF97AE282567B5A70083F8F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +83,14 @@
 			name = AppCore;
 			sourceTree = "<group>";
 		};
+		EF8FA014256919E300653D86 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF8FA015256919F600653D86 /* Extension+View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EF97AE202567B5A70083F8F7 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +111,7 @@
 				EF97AE272567B5A70083F8F7 /* ContentView.swift */,
 				EF97AE492567BA000083F8F7 /* Navigation */,
 				EFCCBE72256821DC009790DF /* RecordTime */,
+				EF8FA014256919E300653D86 /* Extensions */,
 				EF97AE282567B5A70083F8F7 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -300,6 +312,7 @@
 			files = (
 				EFCCBE742568221B009790DF /* RecordTimeView.swift in Sources */,
 				EFCCBE6E25681E54009790DF /* SideBar.swift in Sources */,
+				EF8FA016256919F600653D86 /* Extension+View.swift in Sources */,
 				EF97AE4B2567BA340083F8F7 /* TabBar.swift in Sources */,
 				EF97AE3B2567B5A70083F8F7 /* ContentView.swift in Sources */,
 				EF8F9FFE2569149200653D86 /* AppCore.swift in Sources */,
@@ -315,6 +328,7 @@
 				EF8F9FFF2569149200653D86 /* AppCore.swift in Sources */,
 				EF97AE3C2567B5A70083F8F7 /* ContentView.swift in Sources */,
 				EF97AE512567BA440083F8F7 /* SideBar.swift in Sources */,
+				EF8FA017256919F600653D86 /* Extension+View.swift in Sources */,
 				EF97AE562567BAA20083F8F7 /* NavigationItem.swift in Sources */,
 				EFCCBE752568221B009790DF /* RecordTimeView.swift in Sources */,
 				EF97AE3A2567B5A70083F8F7 /* QMiteApp.swift in Sources */,
