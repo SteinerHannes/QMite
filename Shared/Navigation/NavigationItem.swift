@@ -1,4 +1,5 @@
 import SwiftUI
+import ComposableArchitecture
 
 enum NavigationItem: Identifiable, Hashable {
     case recordTime
@@ -13,10 +14,10 @@ enum NavigationItem: Identifiable, Hashable {
         }
     }
 
-    var view: some View {
+    func view(store: Store<AppState, AppAction>) -> some View {
         switch self {
             case .recordTime:
-                return RecordTimeView().ereaseToAnyView()
+                return RecordTimeView(store: store).ereaseToAnyView()
             case .statistics:
                 return Text("Statistics").ereaseToAnyView()
         }

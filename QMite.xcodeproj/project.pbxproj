@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF16A149256979AF00F2863B /* RecordTimeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16A148256979AF00F2863B /* RecordTimeCore.swift */; };
+		EF16A14A256979AF00F2863B /* RecordTimeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16A148256979AF00F2863B /* RecordTimeCore.swift */; };
 		EF8F9FF42569143500653D86 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EF8F9FF32569143500653D86 /* ComposableArchitecture */; };
 		EF8F9FF92569143F00653D86 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EF8F9FF82569143F00653D86 /* ComposableArchitecture */; };
 		EF8F9FFE2569149200653D86 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F9FFD2569149200653D86 /* AppCore.swift */; };
@@ -39,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF16A148256979AF00F2863B /* RecordTimeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCore.swift; sourceTree = "<group>"; };
 		EF8F9FFD2569149200653D86 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 		EF8FA00B2569182F00653D86 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EF8FA015256919F600653D86 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 			children = (
 				EF8F9FFD2569149200653D86 /* AppCore.swift */,
 				EF8FA0402569364400653D86 /* SettingsCore.swift */,
+				EF16A148256979AF00F2863B /* RecordTimeCore.swift */,
 			);
 			name = AppCore;
 			sourceTree = "<group>";
@@ -359,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFCCBE742568221B009790DF /* RecordTimeView.swift in Sources */,
+				EF16A149256979AF00F2863B /* RecordTimeCore.swift in Sources */,
 				EFCCBE6E25681E54009790DF /* SideBar.swift in Sources */,
 				EF8FA016256919F600653D86 /* Extension+View.swift in Sources */,
 				EF8FA0412569364400653D86 /* SettingsCore.swift in Sources */,
@@ -377,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF16A14A256979AF00F2863B /* RecordTimeCore.swift in Sources */,
 				EF8F9FFF2569149200653D86 /* AppCore.swift in Sources */,
 				EF97AE3C2567B5A70083F8F7 /* ContentView.swift in Sources */,
 				EF8FA0422569364400653D86 /* SettingsCore.swift in Sources */,

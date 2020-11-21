@@ -74,7 +74,7 @@ struct SideBar: View {
             List {
                 ForEach(NavigationItem.allCases) { item in
                     NavigationLink(
-                        destination: item.view,
+                        destination: item.view(store: store),
                         tag: item,
                         selection: viewStore.binding(
                             get: { $0.selectedNavigationItem },

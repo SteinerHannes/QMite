@@ -20,12 +20,12 @@ struct TabBar: View {
                 )
             ) {
                 ForEach(NavigationItem.allCases) { item in
-                    item.view
-                    .tabItem {
-                        Text(item.userFacingString)
-                        Image(systemName: item.icon)
-                    }
-                    .tag(item)
+                    item.view(store: store)
+                        .tabItem {
+                            Text(item.userFacingString)
+                            Image(systemName: item.icon)
+                        }
+                        .tag(item)
                 }
             }
         }

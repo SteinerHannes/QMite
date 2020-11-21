@@ -42,6 +42,7 @@ enum AppAction: Equatable {
     case setNavigationItem(NavigationItem)
     case settingsAction(SettingsAction)
     case setSheet(presented: Bool)
+    case todayAction(RecordTimeAction)
 }
 
 struct AppEnvironment {
