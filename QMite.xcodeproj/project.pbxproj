@@ -113,6 +113,22 @@
 			path = Keychain;
 			sourceTree = "<group>";
 		};
+		EF8FA0372569347900653D86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF8FA0382569348B00653D86 /* Profil+Settings */,
+				EFCCBE72256821DC009790DF /* RecordTime */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF8FA0382569348B00653D86 /* Profil+Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Profil+Settings";
+			sourceTree = "<group>";
+		};
 		EF97AE202567B5A70083F8F7 = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +146,7 @@
 			children = (
 				EF97AE262567B5A70083F8F7 /* QMiteApp.swift */,
 				EF97AE272567B5A70083F8F7 /* ContentView.swift */,
-				EFCCBE72256821DC009790DF /* RecordTime */,
+				EF8FA0372569347900653D86 /* Views */,
 				EF8F9FFC2569146200653D86 /* AppCore */,
 				EF8FA01C25691ADD00653D86 /* Clients */,
 				EF97AE492567BA000083F8F7 /* Navigation */,
