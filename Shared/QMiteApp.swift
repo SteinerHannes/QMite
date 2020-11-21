@@ -16,12 +16,8 @@ struct QMiteApp: App {
         #if os(macOS)
         WindowGroup {
             ContentView(store: store)
-                .frame(minWidth: 700, idealWidth: 900, maxWidth: .infinity, minHeight: 400, idealHeight: 600, maxHeight: .infinity)
-        }
-        Settings {
-            Text("Settings")
-                .frame(width: 100, height: 100, alignment: .center)
-        }
+                .frame(minWidth: 400, maxWidth: 600, minHeight: 400, maxHeight: 600)
+        }.windowStyle(TitleBarWindowStyle())
         #else
         WindowGroup {
             ContentView(store: store)

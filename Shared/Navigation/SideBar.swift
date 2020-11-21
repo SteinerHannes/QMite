@@ -19,7 +19,7 @@ struct SideBar: View {
                     .navigationTitle("Navigation")
                     .toolbar {
                         ToolbarItem(placement: ToolbarItemPlacement.navigation) {
-                            Button(action: { }, label: {
+                            Button(action: { viewStore.send(AppAction.setSheet(presented: true)) }, label: {
                                 Image(systemName: "person.fill")
                                     .font(.system(size: 22, weight: .light))
                             })
@@ -27,7 +27,7 @@ struct SideBar: View {
                         ToolbarItem(placement: ToolbarItemPlacement.bottomBar) {
                             if !viewStore.isAPIKeyAvailable {
                                 Button(action: {
-                                    viewStore.send(AppAction.test)
+                                    viewStore.send(AppAction.setSheet(presented: true))
                                 }, label: {
                                     HStack(alignment: .center, spacing: 8) {
                                         Image(systemName: "exclamationmark.triangle.fill")
@@ -45,7 +45,7 @@ struct SideBar: View {
                     .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, maxHeight: .infinity)
                     .toolbar {
                         ToolbarItem(placement: ToolbarItemPlacement.automatic) {
-                            Button(action: { }, label: {
+                            Button(action: { viewStore.send(AppAction.setSheet(presented: true)) }, label: {
                                 if viewStore.isAPIKeyAvailable {
                                     Image(systemName: "person.crop.circle.fill")
                                         .imageScale(.large)

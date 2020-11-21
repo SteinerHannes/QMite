@@ -15,15 +15,41 @@ struct ContentView: View {
     let store: Store<AppState, AppAction>
 
     var body: some View {
-        #if os(iOS)
-        if horizontalSizeClass == .compact {
-            TabBar(store: store)
-        } else {
-            SideBar(store: store)
+        WithViewStore(store) { viewStore in
+            content
+                .onAppear {
+                    viewStore.send(.onAppear)
+                }
+                .sheet(
+                    isPresented: viewStore.binding(
+                        get: { $0.isSettingsSheetPresented },
+                        send: AppAction.setSheet(presented: )
+                    )
+                ) {
+                    IfLetStore(
+                        self.store.scope(
+                            state: { $0.settingsState },
+                            action: AppAction.settingsAction
+                        )
+                    ) { store in
+                        SettingsView(store: store)
+                    }
+                }
         }
-        #else
-        SideBar(store: store)
-        #endif
+    }
+
+    var content: some View {
+        WithViewStore(store) { _ in
+            #if os(iOS)
+            if horizontalSizeClass == .compact {
+                TabBar(store: store)
+            } else {
+                SideBar(store: store)
+            }
+            #else
+            SideBar(store: store)
+            #endif
+        }
     }
 }
 
