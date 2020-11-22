@@ -9,6 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 struct RecordTimeState: Equatable {
+    var today: [TimeEntry] = []
 }
 
 enum RecordTimeAction: Equatable {

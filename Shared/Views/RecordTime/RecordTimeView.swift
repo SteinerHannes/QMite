@@ -19,7 +19,7 @@ struct RecordTimeView: View {
         if horizontalSizeClass == .compact {
             WithViewStore(store) { viewStore in
                 NavigationView {
-                    recordTime
+                    TimeEntryListScreen()
                         .navigationTitle(NavigationItem.recordTime.userFacingString)
                         .navigationBarItems(trailing:
                             Button(action: { viewStore.send(.setSheet(presented: true)) }, label: {
@@ -37,21 +37,17 @@ struct RecordTimeView: View {
                 }.ereaseToAnyView()
             }
         } else {
-            recordTime
+            TimeEntryListScreen()
                 .ereaseToAnyView()
         }
         #else
-        recordTime
+        TimeEntryListScreen()
             .ereaseToAnyView()
         #endif
     }
-
-    var recordTime: some View {
-        Text("hallo")
-    }
 }
 
-struct TodayView_Previews: PreviewProvider {
+struct RecordTimeView_Previews: PreviewProvider {
     static var previews: some View {
         RecordTimeView(store: .mock)
     }

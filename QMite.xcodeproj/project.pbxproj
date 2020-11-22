@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		EF16A149256979AF00F2863B /* RecordTimeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16A148256979AF00F2863B /* RecordTimeCore.swift */; };
 		EF16A14A256979AF00F2863B /* RecordTimeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16A148256979AF00F2863B /* RecordTimeCore.swift */; };
+		EF16A155256985EC00F2863B /* TimeEntryListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16A154256985EC00F2863B /* TimeEntryListScreen.swift */; };
+		EF16A156256985EC00F2863B /* TimeEntryListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16A154256985EC00F2863B /* TimeEntryListScreen.swift */; };
+		EF16A15B25698AF800F2863B /* TimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16A15A25698AF800F2863B /* TimeEntry.swift */; };
+		EF16A15C25698AF800F2863B /* TimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16A15A25698AF800F2863B /* TimeEntry.swift */; };
 		EF8F9FF42569143500653D86 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EF8F9FF32569143500653D86 /* ComposableArchitecture */; };
 		EF8F9FF92569143F00653D86 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EF8F9FF82569143F00653D86 /* ComposableArchitecture */; };
 		EF8F9FFE2569149200653D86 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F9FFD2569149200653D86 /* AppCore.swift */; };
@@ -42,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		EF16A148256979AF00F2863B /* RecordTimeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCore.swift; sourceTree = "<group>"; };
+		EF16A154256985EC00F2863B /* TimeEntryListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntryListScreen.swift; sourceTree = "<group>"; };
+		EF16A15A25698AF800F2863B /* TimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntry.swift; sourceTree = "<group>"; };
 		EF8F9FFD2569149200653D86 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 		EF8FA00B2569182F00653D86 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EF8FA015256919F600653D86 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
@@ -83,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF16A15925698AEA00F2863B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF16A15A25698AF800F2863B /* TimeEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		EF8F9FF72569143F00653D86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +174,7 @@
 				EF97AE272567B5A70083F8F7 /* ContentView.swift */,
 				EF8FA0372569347900653D86 /* Views */,
 				EF8F9FFC2569146200653D86 /* AppCore */,
+				EF16A15925698AEA00F2863B /* Models */,
 				EF8FA01C25691ADD00653D86 /* Clients */,
 				EF97AE492567BA000083F8F7 /* Navigation */,
 				EF8FA02425691BFE00653D86 /* Keychain */,
@@ -209,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				EFCCBE732568221B009790DF /* RecordTimeView.swift */,
+				EF16A154256985EC00F2863B /* TimeEntryListScreen.swift */,
 			);
 			path = RecordTime;
 			sourceTree = "<group>";
@@ -367,8 +383,10 @@
 				EFCCBE6E25681E54009790DF /* SideBar.swift in Sources */,
 				EF8FA016256919F600653D86 /* Extension+View.swift in Sources */,
 				EF8FA0412569364400653D86 /* SettingsCore.swift in Sources */,
+				EF16A15B25698AF800F2863B /* TimeEntry.swift in Sources */,
 				EF8FA02D25691C6E00653D86 /* KeychainWrapper.swift in Sources */,
 				EF8FA02825691C4A00653D86 /* KeychainItemAccessibility.swift in Sources */,
+				EF16A155256985EC00F2863B /* TimeEntryListScreen.swift in Sources */,
 				EF97AE4B2567BA340083F8F7 /* TabBar.swift in Sources */,
 				EF97AE3B2567B5A70083F8F7 /* ContentView.swift in Sources */,
 				EF8F9FFE2569149200653D86 /* AppCore.swift in Sources */,
@@ -387,12 +405,14 @@
 				EF97AE3C2567B5A70083F8F7 /* ContentView.swift in Sources */,
 				EF8FA0422569364400653D86 /* SettingsCore.swift in Sources */,
 				EF97AE512567BA440083F8F7 /* SideBar.swift in Sources */,
+				EF16A15C25698AF800F2863B /* TimeEntry.swift in Sources */,
 				EF8FA017256919F600653D86 /* Extension+View.swift in Sources */,
 				EF8FA02925691C4A00653D86 /* KeychainItemAccessibility.swift in Sources */,
 				EF8FA03D2569356100653D86 /* SettingsView.swift in Sources */,
 				EF97AE562567BAA20083F8F7 /* NavigationItem.swift in Sources */,
 				EFCCBE752568221B009790DF /* RecordTimeView.swift in Sources */,
 				EF97AE3A2567B5A70083F8F7 /* QMiteApp.swift in Sources */,
+				EF16A156256985EC00F2863B /* TimeEntryListScreen.swift in Sources */,
 				EF8FA02E25691C6E00653D86 /* KeychainWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
