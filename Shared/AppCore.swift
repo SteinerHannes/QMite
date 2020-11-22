@@ -32,7 +32,7 @@ struct AppState: Equatable {
             )
         }
     }
-    var todayState = RecordTimeState()
+    var recordTimeState = RecordTimeState()
 
     var isSettingsSheetPresented: Bool { internSettingsState != nil }
 }
@@ -42,15 +42,11 @@ enum AppAction: Equatable {
     case setNavigationItem(NavigationItem)
     case settingsAction(SettingsAction)
     case setSheet(presented: Bool)
-    case todayAction(RecordTimeAction)
+    case recordTimeAction(RecordTimeAction)
 }
 
 struct AppEnvironment {
     var mainQueue: AnySchedulerOf<DispatchQueue>
-
-    private enum Keys: String {
-        case miteApiKey
-    }
 
     func getMiteAPIKey() -> String? {
         return KeychainWrapper.standard.string(forKey: Keys.miteApiKey.rawValue)
@@ -96,10 +92,15 @@ let appReducer: Reducer<AppState, AppAction, AppEnvironment> = .combine(
             SettingsEnvironment(mainQueue: env.mainQueue)
         }
     ),
-    todayReducer.pullback(
-        state: \.todayState,
-        action: /AppAction.todayAction,
-        environment: { _ in RecordTimeEnvironment() }
+    recordTimeReducer.pullback(
+        state: \.recordTimeState,
+        action: /AppAction.recordTimeAction,
+        environment: { env in
+            return RecordTimeEnvironment(
+                miteClient: .live,
+                mainQueue: env.mainQueue
+            )
+        }
     )
 )
 

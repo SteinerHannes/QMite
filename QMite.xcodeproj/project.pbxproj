@@ -39,6 +39,8 @@
 		EF97AE512567BA440083F8F7 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE502567BA440083F8F7 /* SideBar.swift */; };
 		EF97AE552567BAA20083F8F7 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE542567BAA20083F8F7 /* NavigationItem.swift */; };
 		EF97AE562567BAA20083F8F7 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE542567BAA20083F8F7 /* NavigationItem.swift */; };
+		EFBA34B5256A655E00B74E11 /* MiteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBA34B4256A655E00B74E11 /* MiteClient.swift */; };
+		EFBA34B6256A655E00B74E11 /* MiteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBA34B4256A655E00B74E11 /* MiteClient.swift */; };
 		EFCCBE6E25681E54009790DF /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97AE502567BA440083F8F7 /* SideBar.swift */; };
 		EFCCBE742568221B009790DF /* RecordTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCBE732568221B009790DF /* RecordTimeView.swift */; };
 		EFCCBE752568221B009790DF /* RecordTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCBE732568221B009790DF /* RecordTimeView.swift */; };
@@ -66,6 +68,7 @@
 		EF97AE4A2567BA340083F8F7 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		EF97AE502567BA440083F8F7 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		EF97AE542567BAA20083F8F7 /* NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
+		EFBA34B4256A655E00B74E11 /* MiteClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiteClient.swift; sourceTree = "<group>"; };
 		EFCCBE732568221B009790DF /* RecordTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +128,7 @@
 		EF8FA01C25691ADD00653D86 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
+				EFBA34B4256A655E00B74E11 /* MiteClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -387,6 +391,7 @@
 				EF8FA02D25691C6E00653D86 /* KeychainWrapper.swift in Sources */,
 				EF8FA02825691C4A00653D86 /* KeychainItemAccessibility.swift in Sources */,
 				EF16A155256985EC00F2863B /* TimeEntryListScreen.swift in Sources */,
+				EFBA34B5256A655E00B74E11 /* MiteClient.swift in Sources */,
 				EF97AE4B2567BA340083F8F7 /* TabBar.swift in Sources */,
 				EF97AE3B2567B5A70083F8F7 /* ContentView.swift in Sources */,
 				EF8F9FFE2569149200653D86 /* AppCore.swift in Sources */,
@@ -406,6 +411,7 @@
 				EF8FA0422569364400653D86 /* SettingsCore.swift in Sources */,
 				EF97AE512567BA440083F8F7 /* SideBar.swift in Sources */,
 				EF16A15C25698AF800F2863B /* TimeEntry.swift in Sources */,
+				EFBA34B6256A655E00B74E11 /* MiteClient.swift in Sources */,
 				EF8FA017256919F600653D86 /* Extension+View.swift in Sources */,
 				EF8FA02925691C4A00653D86 /* KeychainItemAccessibility.swift in Sources */,
 				EF8FA03D2569356100653D86 /* SettingsView.swift in Sources */,

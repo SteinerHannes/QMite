@@ -8,6 +8,12 @@
 import Foundation
 import ComposableArchitecture
 
+enum Keys: String {
+    case miteApiKey
+    case subdomain
+    case firstLaunch
+}
+
 struct SettingsState: Equatable {
     var isSettingsSheetPresented: Bool = true
     var subdomain: String = ""
@@ -27,12 +33,6 @@ enum SettingsAction: Equatable {
 
 struct SettingsEnvironment {
     var mainQueue: AnySchedulerOf<DispatchQueue>
-
-    private enum Keys: String {
-        case miteApiKey
-        case subdomain
-        case firstLaunch
-    }
 
     func getMiteAPIKey() -> String {
         return KeychainWrapper.standard.string(forKey: Keys.miteApiKey.rawValue) ?? ""

@@ -9,10 +9,38 @@ import SwiftUI
 import ComposableArchitecture
 
 struct TimeEntryListScreen: View {
-    //let store: Store<RecordTimeState,RecordTimeAction>
+    let store: Store<RecordTimeState, RecordTimeAction>
 
     var body: some View {
-        Text("")
+        WithViewStore(store) { viewStore in
+            List {
+                ForEach(viewStore.today) { entry in
+                    TimeEntryDetailScreen(entry: entry.time_entry)
+                }
+            }
+            .listStyle(InsetGroupedListStyle())
+            .onAppear {
+                viewStore.send(.getToday)
+            }
+            .alert(item:
+                viewStore.binding(
+                    get: { $0.error },
+                    send: RecordTimeAction.errorChanged
+                )
+            ) { error in
+                error.alertView
+            }
+        }
+    }
+}
+
+struct TimeEntryDetailScreen: View {
+    let entry: TimeEntry.TimeEntryContent
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(entry.note)
+        }
     }
 }
 

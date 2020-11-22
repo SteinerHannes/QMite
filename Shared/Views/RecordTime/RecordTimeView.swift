@@ -19,30 +19,45 @@ struct RecordTimeView: View {
         if horizontalSizeClass == .compact {
             WithViewStore(store) { viewStore in
                 NavigationView {
-                    TimeEntryListScreen()
-                        .navigationTitle(NavigationItem.recordTime.userFacingString)
-                        .navigationBarItems(trailing:
-                            Button(action: { viewStore.send(.setSheet(presented: true)) }, label: {
-                                if viewStore.isAPIKeyAvailable {
-                                    Image(systemName: "person.crop.circle.fill")
-                                        .imageScale(.large)
-                                } else {
-                                    Image(systemName: "person.crop.circle.fill.badge.exclamationmark")
-                                        .imageScale(.large)
-                                        .foregroundColor(.red)
-                                        .help(Text("No mite-API key saved yet."))
-                                }
-                            })
+                    TimeEntryListScreen(store:
+                        store.scope(
+                            state: { $0.recordTimeState },
+                            action: AppAction.recordTimeAction
                         )
+                    )
+                    .navigationTitle(NavigationItem.recordTime.userFacingString)
+                    .navigationBarItems(trailing:
+                        Button(action: { viewStore.send(.setSheet(presented: true)) }, label: {
+                            if viewStore.isAPIKeyAvailable {
+                                Image(systemName: "person.crop.circle.fill")
+                                    .imageScale(.large)
+                            } else {
+                                Image(systemName: "person.crop.circle.fill.badg.exclamationmark")
+                                    .imageScale(.large)
+                                    .foregroundColor(.red)
+                                    .help(Text("No mite-API key saved yet."))
+                            }
+                        })
+                    )
                 }.ereaseToAnyView()
             }
         } else {
-            TimeEntryListScreen()
-                .ereaseToAnyView()
+            TimeEntryListScreen(store:
+                store.scope(
+                    state: { $0.recordTimeState },
+                    action: AppAction.recordTimeAction
+                )
+            )
+            .ereaseToAnyView()
         }
         #else
-        TimeEntryListScreen()
-            .ereaseToAnyView()
+        TimeEntryListScreen(store:
+            store.scope(
+                state: { $0.recordTimeState },
+                action: AppAction.todayAction
+            )
+        )
+        .ereaseToAnyView()
         #endif
     }
 }
