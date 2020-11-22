@@ -14,8 +14,12 @@ struct TimeEntryListScreen: View {
     var body: some View {
         WithViewStore(store) { viewStore in
             List {
-                ForEach(viewStore.today) { entry in
-                    TimeEntryDetailScreen(entry: entry.time_entry)
+                if viewStore.today.isEmpty {
+                    Text("No entry yet.")
+                } else {
+                    ForEach(viewStore.today) { entry in
+                        TimeEntryDetailScreen(entry: entry.time_entry)
+                    }
                 }
             }
             .listStyle(InsetGroupedListStyle())
